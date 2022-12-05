@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <HcodeHeader />
-
+    <HcodeSection />
     <HcodeFooter />
   </div>
 </template>
@@ -10,12 +10,14 @@
 
 import HcodeHeader from './components/HcodeHeader'
 import HcodeFooter from './components/HcodeFooter'
+import HcodeSection from './components/HcodeSection'
 
 export default {
   name: 'App',
   components: {
     HcodeHeader,
-    HcodeFooter
+    HcodeFooter,
+    HcodeSection
   }
 }
 </script>
