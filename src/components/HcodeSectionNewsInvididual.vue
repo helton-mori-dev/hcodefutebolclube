@@ -1,15 +1,17 @@
 <template>
     <section>
-        news ind
         <div class="row">
             <div class="col-3">
-                <img src="../assets/news1.jpg" alt="Noticia 1">
+                <img 
+                    :src="require('../assets/' + this.imgName)" 
+                    :alt="imgInfo"
+                >
             </div>
             <div class="col-9">
-                <h2>Começam os treinos para a nova temporada</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas necessitatibus repudiandae delectus, praesentium quos ipsam minima, veritatis tempora rerum aliquam, quaerat aperiam unde. Quia quas repellat doloremque vel non amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere sunt eaque ducimus ea accusantium perferendis nemo ad ab tempora doloribus omnis quos, cupiditate dolores deleniti saepe alias unde quisquam maiores.</p>
+                <h2>{{ newsTitle }}</h2>
+                <p>{{ newsContent }}</p>
 
-                <span class="font-italic">01/01/2020</span>
+                <span class="font-italic">{{ newsDate }}</span>
             </div>
         </div>
     </section>
@@ -17,7 +19,28 @@
 
 <script>
 export default {
-
+    props: {
+        imgName: {
+            type: String,
+            required: true
+        },
+        imgInfo: {
+            type: String,
+            required: true
+        },
+        newsTitle: {
+            type: String,
+            required: true
+        },
+        newsContent: {
+            type: String,
+            required: true
+        },
+        newsDate: {
+            type: String,
+            required: true
+        }
+    }
 }
 </script>
 
