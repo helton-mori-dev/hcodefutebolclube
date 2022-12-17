@@ -9,7 +9,9 @@
                 :news-title="notice.title"
                 :news-content="notice.content"
                 :news-date="notice.date"
-            />
+            >
+                <p>{{ notice.content | truncate(200) }}</p>
+            </HcodeSectionNewsInvididual>
         </div>
     </section>
 </template>
