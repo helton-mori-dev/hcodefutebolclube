@@ -10,13 +10,15 @@
             <div class="col-9">
                 <slot name="title"></slot>
                 <slot>Notícia padrão</slot>
-                <span class="font-italic">{{ newsDate }}</span>
+                <span class="font-italic">{{ formatDate(newsDate) }}</span>
             </div>
         </div>
     </section>
 </template>
 
 <script>
+import Utils from '@/mixins/UtilsMixins';
+
 export default {
     props: {
         imgName: {
@@ -31,7 +33,8 @@ export default {
             type: String,
             required: true
         }
-    }
+    },
+    mixins: [Utils]
 }
 </script>
 
