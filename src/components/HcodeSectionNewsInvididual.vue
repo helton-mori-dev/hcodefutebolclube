@@ -8,7 +8,7 @@
                 >
             </div>
             <div class="col-9">
-                <h2>{{ newsTitle }}</h2>
+                <slot name="title"></slot>
                 <slot>Notícia padrão</slot>
                 <span class="font-italic">{{ newsDate }}</span>
             </div>
@@ -24,10 +24,6 @@ export default {
             required: true
         },
         imgInfo: {
-            type: String,
-            required: true
-        },
-        newsTitle: {
             type: String,
             required: true
         },
