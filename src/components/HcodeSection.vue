@@ -6,9 +6,7 @@
             </div>
         </div>
 
-        <HcodeSectionBanner />
-
-        <HcodeSectionNews />
+        <component :is="currentComponent"></component>
 
         <div class="container">
             <div class="row my-club mt-5">
@@ -35,7 +33,8 @@ export default {
         HcodeInput
     },
     props: {
-        championship: String
+        championship: String,
+        currentComponent: String
     },
     data () {
         return {
