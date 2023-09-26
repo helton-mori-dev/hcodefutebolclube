@@ -13,7 +13,6 @@
 import HcodeHeader from "./components/HcodeHeader";
 import HcodeFooter from "./components/HcodeFooter";
 import HcodeSection from "./components/HcodeSection";
-// import { mapMutations } from 'vuex'
 import { mapActions } from "vuex";
 
 export default {
@@ -29,12 +28,6 @@ export default {
     };
   },
   methods: {
-    // ...mapMutations({
-    //   changeChampionship: 'setChampionship'
-    // }),
-    // changeChampionship(value) {
-    //   this.$store.dispatch("changeChampionship", value);
-    // },
     ...mapActions(["changeChampionship"]),
     changeComponent(value) {
       let component;
