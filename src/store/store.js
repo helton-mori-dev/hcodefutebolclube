@@ -28,8 +28,7 @@ export default new Vuex.Store({
             date: '2020-01-20',
             img: 'news3.jpg',
             imgInfo: 'Notícia 3'
-        }
-        ],
+        }],
     },
     getters: {
         getChampionship(state) {
@@ -45,6 +44,11 @@ export default new Vuex.Store({
     mutations: {
         setChampionship(state, newValue) {
             state.championship = newValue
+        }
+    },
+    actions: {
+        changeChampionship(context, value) {
+            context.commit('setChampionship', value)
         }
     }
 })
