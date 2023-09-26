@@ -1,13 +1,7 @@
 <template>
   <div id="app">
-    <HcodeHeader 
-      @select-championship="changeChampionship"
-      @change-component="changeComponent"
-    />
-    <HcodeSection 
-      :championship="championship"
-      :current-component="currentSectionComponent"
-    />
+    <HcodeHeader @select-championship="changeChampionship" @change-component="changeComponent" />
+    <HcodeSection :current-component="currentSectionComponent" />
     <HcodeFooter />
   </div>
 </template>
@@ -25,9 +19,8 @@ export default {
     HcodeFooter,
     HcodeSection
   },
-  data () {
+  data() {
     return {
-      championship: 'Campeonato Brasileiro',
       currentSectionComponent: 'HcodeSectionBanner'
     }
   },

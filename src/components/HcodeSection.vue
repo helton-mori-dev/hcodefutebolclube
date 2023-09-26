@@ -24,25 +24,27 @@
 <script>
 import HcodeSectionBanner from './HcodeSectionBanner'
 import HcodeInput from './HcodeInput'
+import { mapState } from 'vuex'
 
 export default {
     components: {
         HcodeSectionBanner,
-        HcodeSectionNews: () => import ('./HcodeSectionNews'),
+        HcodeSectionNews: () => import('./HcodeSectionNews'),
         HcodeInput
     },
     props: {
-        championship: String,
         currentComponent: String
     },
-    data () {
+    data() {
         return {
-            myClub: 'Hcode treinamentos'
+
         }
+    },
+    computed: {
+        ...mapState(['championship']),
+        ...mapState({ myClub: 'clubName' })
     }
 }
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
