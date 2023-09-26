@@ -5,7 +5,15 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
     state: {
-        championship: 'Campeonato Brasileiro',
+        championship: 'Campeonato Brasileirão',
         clubName: 'Hcode treinamentos 10'
+    },
+    getters: {
+        getChampionship(state) {
+            return state.championship
+        },
+        getClubName(state) {
+            return state.clubName
+        }
     }
 })
