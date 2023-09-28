@@ -3,15 +3,12 @@
         <div class="container">
             <div class="row div-news">
                 <div class="col-6">
-                    <img src="../assets/news1.jpg" alt="">
+                    <img :src="require(`../assets/${notice.img}`)" :alt="notice.imgInfo">
                 </div>
                 <div class="col-6">
-                    <h2>Título</h2>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam sequi aperiam hic? Minima cum
-                        asperiores minus ipsum excepturi qui cumque laboriosam sint odit pariatur facere deserunt
-                        blanditiis,
-                        iste quibusdam voluptates.</p>
-                    <span>31/12/2019</span>
+                    <h2>{{ notice.title }}</h2>
+                    <p>{{ notice.content }}</p>
+                    <span>{{ formatDate(notice.date) }}</span>
                 </div>
             </div>
         </div>
@@ -19,7 +16,14 @@
 </template>
 
 <script>
+import Utils from '@/mixins/UtilsMixins';
 export default {
+    computed: {
+        notice() {
+            return this.$store.getters.getNewsFromId(this.$route.params.idnotice)
+        }
+    },
+    mixins: [Utils]
 
 }
 </script>

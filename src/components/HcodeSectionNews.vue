@@ -4,7 +4,7 @@
             <HcodeSectionNewsInvididual v-for="notice in news" :key=notice.id :img-name="notice.img"
                 :img-info="notice.imgInfo" :news-content="notice.content" :news-date="notice.date">
                 <template #title>
-                    <h2 @click="goToPage('/notice')">{{ notice.title }}</h2>
+                    <h2 @click="goToPage(`/news/${notice.id}`)">{{ notice.title }}</h2>
                 </template>
                 <p>{{ notice.content | truncate(200) }}</p>
             </HcodeSectionNewsInvididual>
