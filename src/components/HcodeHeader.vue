@@ -1,59 +1,77 @@
 <template>
-    <header>
-        <div class="container">
-            <div class="navbar navbar-expand">
-                <a href="#" class="link navbar-brand mr-auto">
-                    <img src="./../assets/logo.svg" alt="Hcode treinamentos" class="img d-inline-block align-top" id="logo">Futebol clube
-                </a>
-                <div class="links mr-2">
-                    <a href="" @click.prevent="$emit('change-component','home')" class="btn mr-5">Início</a>
-                    <a href="" @click.prevent="$emit('change-component','news')" class="btn mr-5">Notícias</a>
-                    <a href="" class="btn mr-5">Classificações</a>
-                    <select name="championship" id="select-championship" class="form-control" @change="$emit('select-championship', $event.target.value)">
-                        <option value="">Selecione um campeonato</option>
-                        <option value="Campeonato Brasileiro" selected>Campeonato Brasileiro</option>
-                        <option value="Campeonato Espanhol">Campeonato Espanhol</option>
-                        <option value="Campeonato Inglês">Campeonato Inglês</option>
-                        <option value="Campeonato Italiano">Campeonato Italiano</option>
-                    </select>
-                </div>
-            </div>
+  <header>
+    <div class="container">
+      <div class="navbar navbar-expand">
+        <a href="#" class="link navbar-brand mr-auto">
+          <img
+            src="./../assets/logo.svg"
+            alt="Hcode treinamentos"
+            class="img d-inline-block align-top"
+            id="logo"
+          />Futebol clube
+        </a>
+        <div class="links mr-2">
+          <router-link class="btn mr-5" to="/">Início</router-link>
+          <router-link class="btn mr-5" to="news">Notícias</router-link>
+          <router-link class="btn mr-5" to="classicicacoes"
+            >Classificações</router-link
+          >
+
+          <select
+            name="championship"
+            id="select-championship"
+            class="form-control"
+            @change="$emit('select-championship', $event.target.value)"
+          >
+            <option value="">Selecione um campeonato</option>
+            <option value="Campeonato Brasileiro" selected>
+              Campeonato Brasileiro
+            </option>
+            <option value="Campeonato Espanhol">Campeonato Espanhol</option>
+            <option value="Campeonato Inglês">Campeonato Inglês</option>
+            <option value="Campeonato Italiano">Campeonato Italiano</option>
+          </select>
         </div>
-    </header>
+      </div>
+    </div>
+  </header>
 </template>
 
 <script>
-export default {
-
-}
+export default {};
 </script>
 
 <style scoped>
 header {
-    background-color: #000;
+  background-color: #000;
 }
 
 #logo {
-    width: 150px;
-    height: 100%;
+  width: 150px;
+  height: 100%;
 }
 
 .links {
-    display: inline-flex;
+  display: inline-flex;
 }
 
 .links a {
-    color: #fff;
+  color: #fff;
 }
 
 .links a:focus {
-    outline: none!important;
-    box-shadow: none!important;
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 .link {
-    color: #d48e23;
-    font-size: 30px;
-    font-family: 'Rajdhani';
+  color: #d48e23;
+  font-size: 30px;
+  font-family: "Rajdhani";
+}
+
+.link-active {
+  background-color: #fff;
+  color: #333 !important;
 }
 </style>
