@@ -15,12 +15,17 @@ export default new VueRouter({
         },
         {
             path: '/news',
-            component: News
+            component: News,
+            alias: '/notices'
         },
         {
             path: '/news/:idnotice',
             name: 'notice',
             component: Notice
-        }
+        },
+        {
+            path: '/admin',
+            redirect: '/'
+        },
     ]
 })
