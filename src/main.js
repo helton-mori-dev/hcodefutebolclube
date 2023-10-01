@@ -9,15 +9,15 @@ import App from './App.vue'
 Vue.use(Vue2Filters)
 Vue.config.productionTip = false
 
-router.beforeEach((to, from, next) => {
-  console.log(to, from)
-  next()
+// router.beforeEach((to, from, next) => {
+//   console.log(to, from)
+//   next()
 
-})
+// })
 
-router.afterEach(() => {
-  console.log('ok')
-})
+// router.afterEach(() => {
+//   console.log('ok')
+// })
 
 new Vue({
   render: h => h(App),
