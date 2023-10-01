@@ -9,8 +9,7 @@ Vue.use(VueRouter)
 
 export default new VueRouter({
     linkExactActiveClass: 'link-active',
-    routes: [
-        {
+    routes: [{
             path: '/',
             component: Home
         },
@@ -20,6 +19,7 @@ export default new VueRouter({
         },
         {
             path: '/news/:idnotice',
+            name: 'notice',
             component: Notice
         }
     ]
